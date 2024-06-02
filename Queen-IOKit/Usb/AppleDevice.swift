@@ -55,7 +55,7 @@ class AppleDevice {
         }
         
         var kr: Int32 = 0
-        var length: Int = 6
+        let length: Int = 6
         var requestPtr = [UInt8](repeating: 0, count: length)
         var request = IOUSBDevRequest(bmRequestType: RequestType.DeviceToHost.rawValue,
                                       bRequest: 0,

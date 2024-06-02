@@ -10,7 +10,7 @@ import USBDeviceSwift
 
 class ViewController: NSViewController {
     var connectedDevice: AppleDevice?
-    var exploitConfig: ExploitConfig? = nil
+    var exploitConfig: Exploit? = nil
 
     @IBOutlet weak var deviceInfoLabel: NSTextField!
     
