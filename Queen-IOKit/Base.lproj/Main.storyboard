@@ -12,9 +12,9 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Queen-IOKit" id="1Xt-HY-uBw">
+                            <menuItem title="Queen" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Queen-IOKit" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Queen" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About Queen-IOKit" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -685,7 +685,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Queen" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -710,19 +710,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wje-hv-DLf">
-                                <rect key="frame" x="18" y="184" width="214" height="66"/>
+                            <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="XRK-7w-gaU" userLabel="H Split View">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="G7v-rU-8oB">
-                                    <font key="font" usesAppearanceFont="YES"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="wje-hv-DLf">
+                                        <rect key="frame" x="-2" y="0.0" width="484" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="G7v-rU-8oB">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" id="wPX-Hb-yrR" userLabel="V Split View">
+                                        <rect key="frame" x="0.0" y="40" width="480" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <customView id="3Hd-DY-ICT" userLabel="Dummy">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="62"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="OVa-vE-a7g"/>
+                                                    <constraint firstAttribute="width" constant="192" id="mCR-Jh-kGS"/>
+                                                </constraints>
+                                            </customView>
+                                            <customView fixedFrame="YES" id="BUe-6o-y25" userLabel="Dummy">
+                                                <rect key="frame" x="202" y="0.0" width="176" height="62"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </customView>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" id="Mcx-Ei-FEF">
+                                                <rect key="frame" x="382" y="-6" width="104" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="push" title="Run" bezelStyle="rounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xXy-Gq-hQm">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="480" id="ThV-Pm-mzP"/>
+                                        </constraints>
+                                        <holdingPriorities>
+                                            <real value="250"/>
+                                            <real value="250"/>
+                                            <real value="250"/>
+                                        </holdingPriorities>
+                                    </splitView>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="LpJ-z6-dZz">
+                                        <rect key="frame" x="-2" y="112" width="484" height="158"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="158" id="plT-Sb-ski"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="DJB-eY-d0X">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="deviceInfo" destination="wje-hv-DLf" id="dXE-vw-3eA"/>
+                        <outlet property="deviceInfoLabel" destination="wje-hv-DLf" id="dXE-vw-3eA"/>
+                        <outlet property="progressTextView" destination="LpJ-z6-dZz" id="Oyx-t9-I4V"/>
+                        <outlet property="runButton" destination="Mcx-Ei-FEF" id="vyg-gg-hKj"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

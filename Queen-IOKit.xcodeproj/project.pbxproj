@@ -14,6 +14,7 @@
 		761DAE2B2C0B8DB900184819 /* USBDeviceSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 761DAE2A2C0B8DB900184819 /* USBDeviceSwift */; };
 		761DAE2E2C0B8FE300184819 /* AppleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE2D2C0B8FE300184819 /* AppleDevice.swift */; };
 		761DAE302C0BBFBD00184819 /* DfuDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE2F2C0BBFBD00184819 /* DfuDevice.swift */; };
+		761DAE332C0BF34F00184819 /* ExploitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE322C0BF34F00184819 /* ExploitConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		761DAE232C0AAC5A00184819 /* Queen_IOKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Queen_IOKit.entitlements; sourceTree = "<group>"; };
 		761DAE2D2C0B8FE300184819 /* AppleDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDevice.swift; sourceTree = "<group>"; };
 		761DAE2F2C0BBFBD00184819 /* DfuDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfuDevice.swift; sourceTree = "<group>"; };
+		761DAE322C0BF34F00184819 /* ExploitConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploitConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		761DAE192C0AAC5800184819 /* Queen-IOKit */ = {
 			isa = PBXGroup;
 			children = (
+				761DAE312C0BF31F00184819 /* Exploit */,
 				761DAE2C2C0B8FCD00184819 /* Usb */,
 				761DAE1A2C0AAC5800184819 /* AppDelegate.swift */,
 				761DAE1C2C0AAC5800184819 /* ViewController.swift */,
@@ -75,6 +78,14 @@
 				761DAE2F2C0BBFBD00184819 /* DfuDevice.swift */,
 			);
 			path = Usb;
+			sourceTree = "<group>";
+		};
+		761DAE312C0BF31F00184819 /* Exploit */ = {
+			isa = PBXGroup;
+			children = (
+				761DAE322C0BF34F00184819 /* ExploitConfig.swift */,
+			);
+			path = Exploit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				761DAE2E2C0B8FE300184819 /* AppleDevice.swift in Sources */,
 				761DAE302C0BBFBD00184819 /* DfuDevice.swift in Sources */,
+				761DAE332C0BF34F00184819 /* ExploitConfig.swift in Sources */,
 				761DAE1D2C0AAC5800184819 /* ViewController.swift in Sources */,
 				761DAE1B2C0AAC5800184819 /* AppDelegate.swift in Sources */,
 			);

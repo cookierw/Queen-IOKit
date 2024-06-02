@@ -10,8 +10,13 @@ import USBDeviceSwift
 
 class ViewController: NSViewController {
     var connectedDevice: AppleDevice?
+    var exploitConfig: ExploitConfig? = nil
 
-    @IBOutlet weak var deviceInfo: NSTextField!
+    @IBOutlet weak var deviceInfoLabel: NSTextField!
+    
+    @IBOutlet weak var runButton: NSButton!
+    
+    @IBOutlet weak var progressTextView: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +25,15 @@ class ViewController: NSViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.usbConnected), name: Notification.Name.USBDeviceConnected, object: nil)
         
         if let connectedDevice {
-            deviceInfo.stringValue = connectedDevice.deviceInfo.name
+            deviceInfoLabel.stringValue = connectedDevice.deviceInfo.name
         } else {
-            deviceInfo.stringValue = "Connect device to continue"
+            deviceInfoLabel.stringValue = "Connect device to continue"
         }
+        
+        runButton.isEnabled = exploitConfig != nil
+        runButton.action = #selector(exploitConfig?.run)
+        
+        progressTextView.stringValue = "Configure and click \"Run\""
     }
 
     override var representedObject: Any? {
@@ -48,7 +58,8 @@ class ViewController: NSViewController {
                 default:
                     self.connectedDevice = NormalDevice(with: deviceInfo)
             }
-            self.deviceInfo.stringValue = deviceInfo.name
+            
+            self.deviceInfoLabel.stringValue = deviceInfo.name
         }
     }
 }
