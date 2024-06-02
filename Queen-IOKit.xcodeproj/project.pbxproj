@@ -16,6 +16,7 @@
 		761DAE302C0BBFBD00184819 /* DfuDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE2F2C0BBFBD00184819 /* DfuDevice.swift */; };
 		761DAE332C0BF34F00184819 /* Exploit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE322C0BF34F00184819 /* Exploit.swift */; };
 		761DAE352C0CD8CB00184819 /* ExploitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE342C0CD8CB00184819 /* ExploitConfig.swift */; };
+		761DAE3A2C0CF53300184819 /* MVPCStruct in Frameworks */ = {isa = PBXBuildFile; productRef = 761DAE392C0CF53300184819 /* MVPCStruct */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				761DAE2B2C0B8DB900184819 /* USBDeviceSwift in Frameworks */,
+				761DAE3A2C0CF53300184819 /* MVPCStruct in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +111,7 @@
 			name = "Queen-IOKit";
 			packageProductDependencies = (
 				761DAE2A2C0B8DB900184819 /* USBDeviceSwift */,
+				761DAE392C0CF53300184819 /* MVPCStruct */,
 			);
 			productName = "Queen-IOKit";
 			productReference = 761DAE172C0AAC5800184819 /* Queen-IOKit.app */;
@@ -140,6 +143,7 @@
 			mainGroup = 761DAE0E2C0AAC5800184819;
 			packageReferences = (
 				761DAE292C0B8DB900184819 /* XCRemoteSwiftPackageReference "USBDeviceSwift" */,
+				761DAE382C0CF53300184819 /* XCRemoteSwiftPackageReference "MVPCStruct" */,
 			);
 			productRefGroup = 761DAE182C0AAC5800184819 /* Products */;
 			projectDirPath = "";
@@ -393,6 +397,14 @@
 				kind = branch;
 			};
 		};
+		761DAE382C0CF53300184819 /* XCRemoteSwiftPackageReference "MVPCStruct" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cookierw/MVPCStruct.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -400,6 +412,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 761DAE292C0B8DB900184819 /* XCRemoteSwiftPackageReference "USBDeviceSwift" */;
 			productName = USBDeviceSwift;
+		};
+		761DAE392C0CF53300184819 /* MVPCStruct */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 761DAE382C0CF53300184819 /* XCRemoteSwiftPackageReference "MVPCStruct" */;
+			productName = MVPCStruct;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
