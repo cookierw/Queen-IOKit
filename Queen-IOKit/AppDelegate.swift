@@ -12,7 +12,8 @@ import USBDeviceSwift
 class AppDelegate: NSObject, NSApplicationDelegate {
     let usbDeviceMonitor = USBDeviceMonitor([
         USBMonitorData(vendorId: APPLE_VID, productId: DeviceMode.Normal.rawValue),
-        USBMonitorData(vendorId: APPLE_VID, productId: DeviceMode.Dfu.rawValue)
+        USBMonitorData(vendorId: APPLE_VID, productId: DeviceMode.Dfu.rawValue),
+        USBMonitorData(vendorId: APPLE_VID, productId: DeviceMode.Pongo.rawValue)
     ])
     
 

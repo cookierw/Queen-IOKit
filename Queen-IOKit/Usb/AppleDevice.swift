@@ -13,9 +13,9 @@ let APPLE_VID: UInt16 = 0x5ac
 
 // PIDs for various device state
 enum DeviceMode: UInt16 {
-    case Dfu = 0x1227
+    case Dfu    = 0x1227
     case Normal = 0x12a8
-    case Pongo
+    case Pongo  = 0x4141
 }
 
 // bmRequestType
