@@ -10,7 +10,8 @@ import USBDeviceSwift
 
 class ViewController: NSViewController {
     var connectedDevice: AppleDevice?
-    var exploitConfig: Exploit? = nil
+    var exploitConfig: ExploitConfig? = nil
+    var exploitService: Exploit? = nil
 
     @IBOutlet weak var deviceInfoLabel: NSTextField!
     
@@ -30,8 +31,8 @@ class ViewController: NSViewController {
             deviceInfoLabel.stringValue = "Connect device to continue"
         }
         
-        runButton.isEnabled = exploitConfig != nil
-        runButton.action = #selector(exploitConfig?.run)
+//        runButton.isEnabled = exploitService != nil
+        runButton.action = #selector(self.runExploit)
         
         progressTextView.stringValue = "Configure and click \"Run\""
     }
@@ -60,6 +61,32 @@ class ViewController: NSViewController {
             }
             
             self.deviceInfoLabel.stringValue = deviceInfo.name
+        }
+    }
+    
+    @objc func runExploit() {
+        guard var connectedDevice = self.connectedDevice as? DfuDevice else {
+            DispatchQueue.main.async {
+                self.progressTextView.stringValue = "No DFU device connected"
+            }
+            return
+        }
+        
+        self.exploitService = Checkm8(dfu: &connectedDevice)
+        
+        guard let exploitService = self.exploitService else {
+            print("could not unwrap exploitService")
+            return
+        }
+        
+        guard exploitService.configure() else {
+            print("error in exploitService.configure()")
+            return
+        }
+        
+        guard exploitService.run() else {
+            print("error in exploitService.run()")
+            return
         }
     }
 }

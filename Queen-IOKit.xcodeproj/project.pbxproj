@@ -18,7 +18,31 @@
 		761DAE352C0CD8CB00184819 /* ExploitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE342C0CD8CB00184819 /* ExploitConfig.swift */; };
 		761DAE3D2C0CFF8700184819 /* StringProtocol+Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE3C2C0CFF8700184819 /* StringProtocol+Queen.swift */; };
 		761DAE402C0D110500184819 /* MVPCStruct in Frameworks */ = {isa = PBXBuildFile; productRef = 761DAE3F2C0D110500184819 /* MVPCStruct */; };
+		761DAE432C0F89DB00184819 /* ibss-flash-nor-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE422C0F89DB00184819 /* ibss-flash-nor-shellcode.bin */; };
+		761DAE502C0F8A1900184819 /* usb_0xA1_2_arm64.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE442C0F8A1700184819 /* usb_0xA1_2_arm64.bin */; };
+		761DAE512C0F8A1900184819 /* checkm8_arm64.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE452C0F8A1700184819 /* checkm8_arm64.bin */; };
+		761DAE522C0F8A1900184819 /* checkm8_armv7.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE462C0F8A1700184819 /* checkm8_armv7.bin */; };
+		761DAE532C0F8A1900184819 /* SHAtter-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE472C0F8A1800184819 /* SHAtter-shellcode.bin */; };
+		761DAE542C0F8A1900184819 /* 24Kpwn-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE482C0F8A1800184819 /* 24Kpwn-shellcode.bin */; };
+		761DAE552C0F8A1900184819 /* t8010_t8011_disable_wxn_arm64.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE492C0F8A1800184819 /* t8010_t8011_disable_wxn_arm64.bin */; };
+		761DAE562C0F8A1900184819 /* t8015_shellcode_arm64.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4A2C0F8A1800184819 /* t8015_shellcode_arm64.bin */; };
+		761DAE572C0F8A1900184819 /* usb_0xA1_2_armv7.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4B2C0F8A1800184819 /* usb_0xA1_2_armv7.bin */; };
+		761DAE582C0F8A1900184819 /* alloc8-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4C2C0F8A1800184819 /* alloc8-shellcode.bin */; };
+		761DAE592C0F8A1900184819 /* 0x8015.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4D2C0F8A1800184819 /* 0x8015.bin */; };
+		761DAE5A2C0F8A1900184819 /* limera1n-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4E2C0F8A1800184819 /* limera1n-shellcode.bin */; };
+		761DAE5B2C0F8A1900184819 /* steaks4uce-shellcode.bin in Resources */ = {isa = PBXBuildFile; fileRef = 761DAE4F2C0F8A1800184819 /* steaks4uce-shellcode.bin */; };
+		761DAE632C0FDAF000184819 /* Queen_IOKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761DAE622C0FDAF000184819 /* Queen_IOKitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		761DAE642C0FDAF000184819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 761DAE0F2C0AAC5800184819 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 761DAE162C0AAC5800184819;
+			remoteInfo = "Queen-IOKit";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		761DAE172C0AAC5800184819 /* Queen-IOKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queen-IOKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +56,21 @@
 		761DAE322C0BF34F00184819 /* Exploit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploit.swift; sourceTree = "<group>"; };
 		761DAE342C0CD8CB00184819 /* ExploitConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploitConfig.swift; sourceTree = "<group>"; };
 		761DAE3C2C0CFF8700184819 /* StringProtocol+Queen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+Queen.swift"; sourceTree = "<group>"; };
+		761DAE422C0F89DB00184819 /* ibss-flash-nor-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ibss-flash-nor-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE442C0F8A1700184819 /* usb_0xA1_2_arm64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = usb_0xA1_2_arm64.bin; sourceTree = "<group>"; };
+		761DAE452C0F8A1700184819 /* checkm8_arm64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = checkm8_arm64.bin; sourceTree = "<group>"; };
+		761DAE462C0F8A1700184819 /* checkm8_armv7.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = checkm8_armv7.bin; sourceTree = "<group>"; };
+		761DAE472C0F8A1800184819 /* SHAtter-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "SHAtter-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE482C0F8A1800184819 /* 24Kpwn-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "24Kpwn-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE492C0F8A1800184819 /* t8010_t8011_disable_wxn_arm64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = t8010_t8011_disable_wxn_arm64.bin; sourceTree = "<group>"; };
+		761DAE4A2C0F8A1800184819 /* t8015_shellcode_arm64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = t8015_shellcode_arm64.bin; sourceTree = "<group>"; };
+		761DAE4B2C0F8A1800184819 /* usb_0xA1_2_armv7.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = usb_0xA1_2_armv7.bin; sourceTree = "<group>"; };
+		761DAE4C2C0F8A1800184819 /* alloc8-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "alloc8-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE4D2C0F8A1800184819 /* 0x8015.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 0x8015.bin; sourceTree = "<group>"; };
+		761DAE4E2C0F8A1800184819 /* limera1n-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "limera1n-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE4F2C0F8A1800184819 /* steaks4uce-shellcode.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "steaks4uce-shellcode.bin"; sourceTree = "<group>"; };
+		761DAE602C0FDAEF00184819 /* Queen-IOKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Queen-IOKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		761DAE622C0FDAF000184819 /* Queen_IOKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queen_IOKitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +83,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		761DAE5D2C0FDAEF00184819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				761DAE192C0AAC5800184819 /* Queen-IOKit */,
+				761DAE612C0FDAF000184819 /* Queen-IOKitTests */,
 				761DAE182C0AAC5800184819 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				761DAE172C0AAC5800184819 /* Queen-IOKit.app */,
+				761DAE602C0FDAEF00184819 /* Queen-IOKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +114,7 @@
 		761DAE192C0AAC5800184819 /* Queen-IOKit */ = {
 			isa = PBXGroup;
 			children = (
+				761DAE412C0F895B00184819 /* Bin */,
 				761DAE3B2C0CFF7300184819 /* Util */,
 				761DAE312C0BF31F00184819 /* Exploit */,
 				761DAE2C2C0B8FCD00184819 /* Usb */,
@@ -104,6 +153,34 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		761DAE412C0F895B00184819 /* Bin */ = {
+			isa = PBXGroup;
+			children = (
+				761DAE4D2C0F8A1800184819 /* 0x8015.bin */,
+				761DAE482C0F8A1800184819 /* 24Kpwn-shellcode.bin */,
+				761DAE4C2C0F8A1800184819 /* alloc8-shellcode.bin */,
+				761DAE452C0F8A1700184819 /* checkm8_arm64.bin */,
+				761DAE462C0F8A1700184819 /* checkm8_armv7.bin */,
+				761DAE4E2C0F8A1800184819 /* limera1n-shellcode.bin */,
+				761DAE472C0F8A1800184819 /* SHAtter-shellcode.bin */,
+				761DAE4F2C0F8A1800184819 /* steaks4uce-shellcode.bin */,
+				761DAE492C0F8A1800184819 /* t8010_t8011_disable_wxn_arm64.bin */,
+				761DAE4A2C0F8A1800184819 /* t8015_shellcode_arm64.bin */,
+				761DAE442C0F8A1700184819 /* usb_0xA1_2_arm64.bin */,
+				761DAE4B2C0F8A1800184819 /* usb_0xA1_2_armv7.bin */,
+				761DAE422C0F89DB00184819 /* ibss-flash-nor-shellcode.bin */,
+			);
+			path = Bin;
+			sourceTree = "<group>";
+		};
+		761DAE612C0FDAF000184819 /* Queen-IOKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				761DAE622C0FDAF000184819 /* Queen_IOKitTests.swift */,
+			);
+			path = "Queen-IOKitTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +205,24 @@
 			productReference = 761DAE172C0AAC5800184819 /* Queen-IOKit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		761DAE5F2C0FDAEF00184819 /* Queen-IOKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761DAE662C0FDAF000184819 /* Build configuration list for PBXNativeTarget "Queen-IOKitTests" */;
+			buildPhases = (
+				761DAE5C2C0FDAEF00184819 /* Sources */,
+				761DAE5D2C0FDAEF00184819 /* Frameworks */,
+				761DAE5E2C0FDAEF00184819 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				761DAE652C0FDAF000184819 /* PBXTargetDependency */,
+			);
+			name = "Queen-IOKitTests";
+			productName = "Queen-IOKitTests";
+			productReference = 761DAE602C0FDAEF00184819 /* Queen-IOKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +235,10 @@
 				TargetAttributes = {
 					761DAE162C0AAC5800184819 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					761DAE5F2C0FDAEF00184819 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 761DAE162C0AAC5800184819;
 					};
 				};
 			};
@@ -161,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				761DAE162C0AAC5800184819 /* Queen-IOKit */,
+				761DAE5F2C0FDAEF00184819 /* Queen-IOKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,8 +270,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761DAE552C0F8A1900184819 /* t8010_t8011_disable_wxn_arm64.bin in Resources */,
+				761DAE502C0F8A1900184819 /* usb_0xA1_2_arm64.bin in Resources */,
+				761DAE5A2C0F8A1900184819 /* limera1n-shellcode.bin in Resources */,
+				761DAE542C0F8A1900184819 /* 24Kpwn-shellcode.bin in Resources */,
+				761DAE562C0F8A1900184819 /* t8015_shellcode_arm64.bin in Resources */,
+				761DAE592C0F8A1900184819 /* 0x8015.bin in Resources */,
 				761DAE1F2C0AAC5A00184819 /* Assets.xcassets in Resources */,
 				761DAE222C0AAC5A00184819 /* Main.storyboard in Resources */,
+				761DAE522C0F8A1900184819 /* checkm8_armv7.bin in Resources */,
+				761DAE532C0F8A1900184819 /* SHAtter-shellcode.bin in Resources */,
+				761DAE432C0F89DB00184819 /* ibss-flash-nor-shellcode.bin in Resources */,
+				761DAE572C0F8A1900184819 /* usb_0xA1_2_armv7.bin in Resources */,
+				761DAE582C0F8A1900184819 /* alloc8-shellcode.bin in Resources */,
+				761DAE512C0F8A1900184819 /* checkm8_arm64.bin in Resources */,
+				761DAE5B2C0F8A1900184819 /* steaks4uce-shellcode.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761DAE5E2C0FDAEF00184819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +312,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		761DAE5C2C0FDAEF00184819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761DAE632C0FDAF000184819 /* Queen_IOKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		761DAE652C0FDAF000184819 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 761DAE162C0AAC5800184819 /* Queen-IOKit */;
+			targetProxy = 761DAE642C0FDAF000184819 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		761DAE202C0AAC5A00184819 /* Main.storyboard */ = {
@@ -377,6 +513,50 @@
 			};
 			name = Release;
 		};
+		761DAE672C0FDAF000184819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2HNWVG9WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cookierw.Queen-IOKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Queen-IOKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Queen-IOKit";
+			};
+			name = Debug;
+		};
+		761DAE682C0FDAF000184819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2HNWVG9WM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cookierw.Queen-IOKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Queen-IOKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Queen-IOKit";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -394,6 +574,15 @@
 			buildConfigurations = (
 				761DAE272C0AAC5A00184819 /* Debug */,
 				761DAE282C0AAC5A00184819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761DAE662C0FDAF000184819 /* Build configuration list for PBXNativeTarget "Queen-IOKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761DAE672C0FDAF000184819 /* Debug */,
+				761DAE682C0FDAF000184819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

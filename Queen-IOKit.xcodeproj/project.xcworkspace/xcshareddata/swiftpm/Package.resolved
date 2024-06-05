@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "mvpcstruct",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cookierw/MVPCStruct.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9326afea59c4fea8762df9fe13a3c60b4e1f3766"
+      }
+    },
+    {
+      "identity" : "usbdeviceswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Arti3DPlayer/USBDeviceSwift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b26a0b4b3f9230ac767eee248e31706f7949a143"
+      }
+    }
+  ],
+  "version" : 2
+}
