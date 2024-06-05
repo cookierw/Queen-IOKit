@@ -9,7 +9,7 @@ import Foundation
 
 
 extension StringProtocol {
-    func decode() -> [UInt8] {
+    func asHexBytes() -> [UInt8] {
         var startIndex = self.startIndex
         
         if count % 2 != 0 {
