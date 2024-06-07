@@ -49,30 +49,30 @@ class AppleDevice {
         self.deviceInfo = deviceInfo
     }
     
-    func getStatus() throws -> [UInt8] {
-        guard let interface = self.deviceInfo.deviceInterfacePtrPtr?.pointee?.pointee else {
-            throw AppleDeviceError.DeviceInterfaceNotFound
-        }
-        
-        var kr: Int32 = 0
-        let length: Int = 6
-        var requestPtr = [UInt8](repeating: 0, count: length)
-        var request = IOUSBDevRequest(bmRequestType: RequestType.DeviceToHost.rawValue,
-                                      bRequest: 0,
-                                      wValue: 0,
-                                      wIndex: 0,
-                                      wLength: UInt16(length),
-                                      pData: &requestPtr,
-                                      wLenDone: 255)
-        
-        kr = interface.DeviceRequest(self.deviceInfo.deviceInterfacePtrPtr, &request)
-        
-        if (kr != kIOReturnSuccess) {
-            throw AppleDeviceError.RequestError(desc: "Unable to read data:\n\(request)")
-        }
-        
-        return requestPtr
-    }
+//    func getStatus() throws -> [UInt8] {
+//        guard let interface = self.deviceInfo.deviceInterfacePtrPtr?.pointee?.pointee else {
+//            throw AppleDeviceError.DeviceInterfaceNotFound
+//        }
+//        
+//        var kr: Int32 = 0
+//        let length: Int = 6
+//        var requestPtr = [UInt8](repeating: 0, count: length)
+//        var request = IOUSBDevRequest(bmRequestType: RequestType.DeviceToHost.rawValue,
+//                                      bRequest: 0,
+//                                      wValue: 0,
+//                                      wIndex: 0,
+//                                      wLength: UInt16(length),
+//                                      pData: &requestPtr,
+//                                      wLenDone: 255)
+//        
+//        kr = interface.DeviceRequest(self.deviceInfo.deviceInterfacePtrPtr, &request)
+//        
+//        if (kr != kIOReturnSuccess) {
+//            throw AppleDeviceError.RequestError(desc: "Unable to read data:\n\(request)")
+//        }
+//        
+//        return requestPtr
+//    }
 }
 
 class NormalDevice: AppleDevice {

@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76073EAF2C12D629000E706F /* QueenTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = QueenTestPlan.xctestplan; sourceTree = "<group>"; };
 		761DAE172C0AAC5800184819 /* Queen-IOKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queen-IOKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761DAE1A2C0AAC5800184819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761DAE1C2C0AAC5800184819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		761DAE612C0FDAF000184819 /* Queen-IOKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				76073EAF2C12D629000E706F /* QueenTestPlan.xctestplan */,
 				761DAE622C0FDAF000184819 /* Queen_IOKitTests.swift */,
 			);
 			path = "Queen-IOKitTests";
@@ -523,7 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cookierw.Queen-IOKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cookierw.Queen-IOKitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
