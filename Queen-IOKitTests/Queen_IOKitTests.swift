@@ -24,7 +24,6 @@ final class Queen_IOKitTests: XCTestCase {
     }
 
     func testExploitConfig() throws {
-        // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
@@ -45,9 +44,16 @@ final class Queen_IOKitTests: XCTestCase {
         XCTAssert(rop.count == 448, "count: \(rop.count)\texpected: \(448)")
         // TODO: fix expectedRopBytes (5 bytes too long...)
         
-        XCTAssert(shellcode.count <= Queen_IOKit.PAYLOAD_OFFSET_ARM64)
+        XCTAssert(
+            shellcode.count > Queen_IOKitTests.expectedShellcodeBytes.count,
+            "Shellcode size too small: \(shellcode.count) bytes"
+        )
+        XCTAssert(shellcode.count <= Queen_IOKit.PAYLOAD_OFFSET_ARM64, "Shellcode too large")
         let placeholderOffset = shellcode.count - (8 * config.checkm8Constants.count)
-        XCTAssert([UInt8](shellcode.dropFirst(placeholderOffset)) == Queen_IOKitTests.expectedShellcodeBytes)
+        XCTAssert(
+            [UInt8](shellcode.dropFirst(placeholderOffset)) == Queen_IOKitTests.expectedShellcodeBytes,
+            "Shellcode constants don't match"
+        )
     }
 
     func testPerformanceExample() throws {
