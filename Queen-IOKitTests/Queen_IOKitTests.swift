@@ -54,6 +54,8 @@ final class Queen_IOKitTests: XCTestCase {
             [UInt8](shellcode.dropFirst(placeholderOffset)) == Queen_IOKitTests.expectedShellcodeBytes,
             "Shellcode constants don't match"
         )
+        
+        // TODO: USB shellcode tests
     }
 
     func testPerformanceExample() throws {
