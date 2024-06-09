@@ -49,30 +49,84 @@ class AppleDevice {
         self.deviceInfo = deviceInfo
     }
     
-//    func getStatus() throws -> [UInt8] {
-//        guard let interface = self.deviceInfo.deviceInterfacePtrPtr?.pointee?.pointee else {
-//            throw AppleDeviceError.DeviceInterfaceNotFound
-//        }
-//        
-//        var kr: Int32 = 0
-//        let length: Int = 6
-//        var requestPtr = [UInt8](repeating: 0, count: length)
-//        var request = IOUSBDevRequest(bmRequestType: RequestType.DeviceToHost.rawValue,
-//                                      bRequest: 0,
-//                                      wValue: 0,
-//                                      wIndex: 0,
-//                                      wLength: UInt16(length),
-//                                      pData: &requestPtr,
-//                                      wLenDone: 255)
-//        
-//        kr = interface.DeviceRequest(self.deviceInfo.deviceInterfacePtrPtr, &request)
-//        
-//        if (kr != kIOReturnSuccess) {
-//            throw AppleDeviceError.RequestError(desc: "Unable to read data:\n\(request)")
-//        }
-//        
-//        return requestPtr
-//    }
+    // uint8_t bm_request_type, uint8_t b_request, uint16_t w_value,
+    // uint16_t w_index, void *p_data, size_t w_len, transfer_ret_t *transfer_ret
+    func sendCtrlRequest(
+        bmRequestType: UInt8, bRequest: UInt8, wValue: UInt16, wIndex: UInt16,
+        wLength: UInt16, data: UnsafeMutablePointer<UInt8>, timeout: UInt32
+    ) throws -> UInt32 {
+        guard let interface = self.deviceInfo.deviceInterfacePtrPtr?.pointee?.pointee else {
+            throw AppleDeviceError.DeviceInterfaceNotFound
+        }
+        
+        var kr: Int32 = 0
+        var wLenDone: UInt32 = 0
+        
+        var request = IOUSBDevRequestTO(bmRequestType: bmRequestType,
+                                        bRequest: bRequest,
+                                        wValue: wValue,
+                                        wIndex: wIndex,
+                                        wLength: wLength,
+                                        pData: data,
+                                        wLenDone: wLenDone,
+                                        noDataTimeout: timeout,
+                                        completionTimeout: timeout)
+        
+        kr = interface.DeviceRequestTO(self.deviceInfo.deviceInterfacePtrPtr, &request)
+        
+        if (kr != kIOReturnSuccess) {
+            throw AppleDeviceError.RequestError(desc: "Unable to read data:\n\(request)")
+        }
+        
+        return wLenDone
+    }
+    
+    let usbAsyncCallback: IOAsyncCallback1 = { refcon, result, arg0 in
+        if let arg = arg0 {
+            arg.storeBytes(of: 1, as: Int.self)
+        }
+        
+        CFRunLoopStop(CFRunLoopGetCurrent())
+    }
+    
+    // uint8_t bm_request_type, uint8_t b_request, uint16_t w_value,
+    // uint16_t w_index, void *p_data, size_t w_len, unsigned usb_abort_timeout, transfer_ret_t *transfer_ret
+    func sendCtrlRequestAsync(
+        bmRequestType: UInt8, bRequest: UInt8, wValue: UInt16, wIndex: UInt16,
+        wLength: UInt16, data: UnsafeMutablePointer<UInt8>, timeout: UInt32
+    ) throws -> Bool {
+        guard let interface = self.deviceInfo.deviceInterfacePtrPtr?.pointee?.pointee else {
+            throw AppleDeviceError.DeviceInterfaceNotFound
+        }
+        
+        var kr: Int32 = 0
+        var wLenDone: UInt32 = 0
+        var cbData: Int = 0
+        
+        var request = IOUSBDevRequestTO(bmRequestType: bmRequestType,
+                                        bRequest: bRequest,
+                                        wValue: wValue,
+                                        wIndex: wIndex,
+                                        wLength: wLength,
+                                        pData: data,
+                                        wLenDone: wLenDone,
+                                        noDataTimeout: timeout,
+                                        completionTimeout: timeout)
+        
+        kr = interface.DeviceRequestAsyncTO(self.deviceInfo.deviceInterfacePtrPtr, &request, usbAsyncCallback, &cbData)
+        
+        if kr == kIOReturnSuccess {
+            Thread.sleep(forTimeInterval: Double(timeout)/1000)
+            kr = interface.USBDeviceAbortPipeZero(self.deviceInfo.deviceInterfacePtrPtr)
+            
+            if kr == kIOReturnSuccess {
+                CFRunLoopRun()
+                return true
+            }
+        }
+        
+        return false
+    }
 }
 
 class NormalDevice: AppleDevice {
